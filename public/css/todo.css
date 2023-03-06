@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Shantell+Sans&family=Tilt+Warp&display=swap');
+:root{
+    --purple:#A31ACB;
+    --pink:#FF78F0;
+    --blue:#39B5E0;
+    --yellow:#F5EA5A;
+}
+body{
+    background-color: #39B5E0;
+}
+*{
+    
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#site-name{
+    font-family: tilt warp;
+    font-size: 5vh;
+}
+
+  .navbar,#site-name{
+    background-color: var(--yellow);
+  }
+.head-navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    /* background: linear-gradient(to right, rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: 10px;
+    -webkit-backdrop-filter: blur(10px);
+    border:1px solid rgba(255,255,255,0.1); */
+    padding:2vh;
+}
+
+.head-navbar ul{
+    display:flex;
+    
+}
+.head-navbar li{
+    font-family:Shantell sans;
+    list-style-type:none;
+    padding-right:2vw;
+    background-color: #F5EA5A;
+    cursor:pointer;
+}
+.head-navbar li:active{
+    color:var(--pink);
+
+}
+
+.btn{
+    color:white;
+    border:2px solid black;
+    border-radius: 5px;
+    padding:2px;
+    font-family:tilt warp;
+    background-color: var(--purple);
+    cursor: pointer;
+}
+
+.task-form{
+    
+    display: flex;
+    justify-content: center;
+    margin:10vh 0;
+   
+}
+.task-input{
+    
+    border: 1px solid white;
+    border-radius:5px;
+    padding:10px 20px;
+    margin-right:3px;
+    width:25vw;
+    transition:width 0.4s ease-in-out;
+}
+.task-input:focus{
+    width:30vw;
+}
+.card{
+    background-color:azure;
+    border-radius:10px;
+    width:25vw;
+    padding:2vh 2vw;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    margin:3vh;
+}
+.card p{
+    font-family: "Helvetica Neue",Helvetica;
+}
+.card h2{
+    font-family: tilt warp;
+    font-weight: lighter;
+}
+.card button{
+    margin:2vh auto 0.5vh;
+}
+.card-section{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+

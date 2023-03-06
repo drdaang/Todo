@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="/css/todo.css">
+    
+</head>
+<body>
+    <nav class="navbar head-navbar">
+        <div class="heading-container">
+        <div id="site-name">Todo List</div>
+        </div>    
+            <ul>
+                <li>
+                    <a>Item Cart</a>
+                </li>
+                <li>
+                    <a>Item detail</a>
+                </li>
+                <li>
+                    <a>History</a>
+                </li>
+                <li><button class="btn dark-mode">Dark Mode</button></li>
+            </ul>
+        </nav>
+        
+            <form class="task-form" action="/add-task" method="post">
+        
+                <input name="title" type="text" placeholder="Enter title" class="task-input input-title">
+                
+                <input name="text" type="text"placeholder="Enter task" class="task-input input-note">
+                <button id='task-btn' class="btn" type="submit">Add Task</button>
+            </form>
+            <hr>
+            <% if (its.length > 0) { %>
+                <div class="flex">
+                <% for (let item of its) { %>
+            <div class="card-section">
+                <div class="card">
+                    <h2><%= item.title %></h2>
+                    <p><%=item.text %></p>
+                    <!-- <form action="/item-detail/<%= item.id %>" method="post">
+                        <input type="hidden" name="itemId" value="<%= item.id %>">
+                        <button class="btn edit-btn" type="submit">Edit</button> 
+                    </form> -->
+                    <form action="/delete-item" method="post">
+                        <button class="btn" type="submit">Done</button>
+                        <input type="hidden" name="deleteId" value="<%= item.id %>">
+                    </form>
+                    
+                </div>
+            </div>
+            <% } %>
+        </div>
+            <% } else { %>
+                <h1>No Products Found!</h1>
+                <% } %>
+  
+</body>
+<script src="/css/todo.js"></script>
+</html>
